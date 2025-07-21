@@ -23,65 +23,55 @@ This project extends the SAGARDOMAIN setup by configuring a file server on Windo
 <h2>Project Walk-through:</h2>
 <p style="font-size: 20px;">
 <b>
-<!-- Accessing Server Manager -->
-Accessing Server Manager: <br/><br />
-<img src="https://via.placeholder.com/800x600.png?text=Server+Manager+Access" height="80%" width="80%" alt="Server Manager Access"/>
-<br />
-<span style="font-size: 16px;">Server Manager is opened on the Domain Controller to initiate the file server setup for SAGARDOMAIN.</span>
-<br />
-<br />
 <!-- Installing File Server Role -->
 Installing File Server Role: <br/><br />
-<img src="https://via.placeholder.com/800x600.png?text=File+Server+Role+Install" height="80%" width="80%" alt="File Server Role Install"/>
+<img src="https://i.imgur.com/chTSax3.png" height="80%" width="80%" alt="File Server Role Install"/>
 <br />
 <span style="font-size: 16px;">The File Server role is installed via the "Add roles and features" wizard in Server Manager to enable file sharing capabilities.</span>
 <br />
 <br />
 <!-- Creating Shared Folders -->
 Creating Shared Folders: <br/><br />
-<img src="https://via.placeholder.com/800x600.png?text=Shared+Folders" height="80%" width="80%" alt="Shared Folders"/>
+<img src="https://i.imgur.com/AlfQcD2.png" height="80%" width="80%" alt="Shared Folders"/>
 <br />
 <span style="font-size: 16px;">Two folders, 'SharedDocs' and 'RestrictedDocs', are created on the server using File Explorer for different access levels.</span>
 <br />
 <br />
 <!-- Creating AD Groups for Permissions -->
 Creating AD Groups for Permissions: <br/><br />
-<img src="https://via.placeholder.com/800x600.png?text=AD+Groups" height="80%" width="80%" alt="AD Groups"/>
+<img src="https://i.imgur.com/ozKBPrA.png" height="80%" width="80%" alt="AD Groups"/>
 <br />
 <span style="font-size: 16px;">Two security groups, 'FileUsers' and 'FileAdmins', are created in Active Directory Users and Computers to manage folder access.</span>
 <br />
 <br />
 <!-- Assigning Users to AD Groups -->
 Assigning Users to AD Groups: <br/><br />
-<img src="https://via.placeholder.com/800x600.png?text=Assign+Users" height="80%" width="80%" alt="Assign Users"/>
-<br />
-<span style="font-size: 16px;">The 10 existing users are assigned to 'FileUsers', with one user (e.g., the admin) added to 'FileAdmins' for elevated access.</span>
-<br />
-<br />
-<!-- Configuring NTFS Permissions -->
-Configuring NTFS Permissions: <br/><br />
-<img src="https://via.placeholder.com/800x600.png?text=NTFS+Permissions" height="80%" width="80%" alt="NTFS Permissions"/>
+<img src="https://i.imgur.com/cpgCZee.png" height="80%" width="80%" alt="Assign Users"/>
+<img src="https://i.imgur.com/TK5I290.png" height="80%" width="80%" alt="Assign Users"/>
 <br />
 <span style="font-size: 16px;">NTFS permissions are set, granting 'FileUsers' read access to 'SharedDocs' and 'FileAdmins' full control over both folders.</span>
 <br />
 <br />
 <!-- Configuring Share Permissions -->
 Configuring Share Permissions: <br/><br />
-<img src="https://via.placeholder.com/800x600.png?text=Share+Permissions" height="80%" width="80%" alt="Share Permissions"/>
+<img src="https://i.imgur.com/LxS7nuN.png" height="80%" width="80%" alt="NTFS Permissions"/>
+<img src="https://i.imgur.com/2WDLqZm.png" height="80%" width="80%" alt="NTFS Permissions"/>
 <br />
 <span style="font-size: 16px;">Share permissions are configured, allowing 'FileUsers' read access and 'FileAdmins' change access to the shared folders.</span>
 <br />
 <br />
 <!-- Sharing the Folders -->
 Sharing the Folders: <br/><br />
-<img src="https://via.placeholder.com/800x600.png?text=Folder+Sharing" height="80%" width="80%" alt="Folder Sharing"/>
+<img src="https://i.imgur.com/J8E49Er.png" height="80%" width="80%" alt="Folder Sharing"/>
+<img src="https://i.imgur.com/Ifeu68k.png" height="80%" width="80%" alt="Folder Sharing"/>
 <br />
 <span style="font-size: 16px;">The 'SharedDocs' and 'RestrictedDocs' folders are shared on the network with the configured permissions applied.</span>
 <br />
 <br />
 <!-- Verifying Access from Windows 10 Client -->
 Verifying Access from Windows 10 Client: <br/><br />
-<img src="https://via.placeholder.com/800x600.png?text=Client+Access" height="80%" width="80%" alt="Client Access"/>
+<img src="https://i.imgur.com/GrUPmB4.png" height="80%" width="80%" alt="Client Access"/>
+<img src="https://i.imgur.com/Isz1E8g.png" height="80%" width="80%" alt="Client Access"/>
 <br />
 <span style="font-size: 16px;">A standard user logs into CLIENT1 and accesses 'SharedDocs' to confirm read-only access, while the admin tests full control.</span>
 <br />
